@@ -1,0 +1,18 @@
+/* Navbar styling is handled by Bootstrap */
+
+/* Hero Image Section */
+.hero-container {
+    padding: 3rem 0;
+    background-color: #f8f9fa; /* Light background to contrast image */
+  }
+  
+  .hero-image {
+    width: 80%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  

@@ -1,0 +1,48 @@
+<app-faculty-menu></app-faculty-menu>
+
+<div class="add-user-wrapper">
+  <div class="container">
+    <h2 class="form-title text-center">Update Student</h2>
+    <form>
+
+      <input
+        type="text"
+        id="id"
+        class="form-control"
+        placeholder="Enter Id"
+        [(ngModel)]="student.id"
+        name="id"
+        hidden
+        required
+      />
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input
+          type="text"
+          id="name"
+          class="form-control"
+          placeholder="Enter name"
+          [(ngModel)]="student.name"
+          name="name"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          placeholder="Enter email"
+          [(ngModel)]="student.email"
+          name="email"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100" (click)="updateStudent()">Update</button>
+    </form>
+  </div>
+</div>

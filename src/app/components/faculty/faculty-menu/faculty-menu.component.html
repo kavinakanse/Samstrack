@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faculty Navbar</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid justify-content-center">
+    <a class="navbar-brand text-warning" href="#">Faculty Panel</a>
+    <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#facultyNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="facultyNavbar">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item"><a class="nav-link" routerLink="/add-student">Add Student</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/all-student">All Students</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/edit-student">Edit Student</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/take-attendence">Take Attendance</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/view-attendence">View Attendance</a></li>
+      </ul>
+    </div>
+
+    <div class="d-flex ms-auto">
+      <button class="btn btn-outline-danger btn-logout">Logout</button>
+    </div>
+  </div>
+</nav>
+
+</body>
+</html>

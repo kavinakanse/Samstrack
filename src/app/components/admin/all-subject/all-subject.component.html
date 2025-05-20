@@ -1,0 +1,30 @@
+<app-admin-menu></app-admin-menu>
+
+<div class="full-page-container">
+  <div class="main-content container-fluid">
+    <h2 class="page-title">All Subject</h2>
+
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let subject of subjectList">
+            <td>{{ subject.id }}</td>
+            <td>{{ subject.name }}</td>
+            <td>
+              <button (click)="deleteSubject(subject.id)" class="btn btn-danger">Delete</button>
+              <a class="btn btn-success" routerLink="/edit-subject">Edit</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

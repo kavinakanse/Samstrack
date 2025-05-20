@@ -1,0 +1,71 @@
+/* Fullscreen Layout */
+.full-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4a90e2, #14549e);
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Main content fills remaining space between menu and footer */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Page Title */
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Table Container */
+.table-responsive {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow-x: auto;
+}
+
+/* Table Styling */
+.table {
+  width: 100%;
+  color: white;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px;
+}
+
+.table thead {
+  background-color: #222;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+button {
+  margin: 3px;
+  padding: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .table th, .table td {
+    padding: 8px;
+  }
+}
+

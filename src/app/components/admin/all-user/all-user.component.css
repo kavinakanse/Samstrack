@@ -1,0 +1,129 @@
+/* Full-Width Layout with Gradient */
+body,
+html {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #4a90e2, #14549e);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+/* Animate Gradient */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Page Title - Now at the Top */
+.header {
+  width: 100%;
+  text-align: center;
+  padding: 25px 15px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.page-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Container Styling */
+.container {
+  max-width: 95%;
+  margin-top: 30px;
+}
+
+/* Table Wrapper */
+.table-responsive {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  overflow-x: auto;
+}
+
+/* Table Styling */
+.table {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 15px;
+}
+
+.table thead {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+/* Buttons */
+.btn {
+  margin: 5px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn-danger:hover {
+  background-color: #ff4d4d;
+  transform: translateY(-2px);
+}
+
+.btn-success:hover {
+  background-color: #28a745;
+  transform: translateY(-2px);
+}
+
+/* Password Pipe Custom Style */
+td:nth-child(2) {
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .table-responsive {
+    padding: 15px;
+  }
+}
