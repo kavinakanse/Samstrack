@@ -6,6 +6,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
+  isLoggedIn():boolean {
+    return !!localStorage.getItem('token');
+  }
 
   constructor(private http:HttpClient) { }
 

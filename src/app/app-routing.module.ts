@@ -15,6 +15,8 @@ import { AllStudentComponent } from './components/faculty/all-student/all-studen
 import { EditStudentComponent } from './components/faculty/edit-student/edit-student.component';
 import { TakeAttendenceComponent } from './components/faculty/take-attendence/take-attendence.component';
 import { ViewAttendenceComponent } from './components/faculty/view-attendence/view-attendence.component';
+import { ViewAllAttendenceComponent } from './components/admin/view-all-attendence/view-all-attendence.component';
+import { AuthGuard } from './auth.guard';
 
 
 const routes: Routes = [
@@ -28,55 +30,73 @@ const routes: Routes = [
   },
   {
     path:'admin-dashboard',
-    component:AdminDashboardComponent
+    component:AdminDashboardComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'faculty-dashboard',
-    component:FacultyDashboardComponent
+    component:FacultyDashboardComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'add-user',
-    component:AddUserComponent
+    component:AddUserComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'all-user',
-    component:AllUserComponent
+    component:AllUserComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'edit-user',
-    component:EditUserComponent
+    component:EditUserComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'add-subject',
-    component:AddSubjectComponent
+    component:AddSubjectComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'all-subject',
-    component:AllSubjectComponent
+    component:AllSubjectComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'edit-subject',
-    component:EditSubjectComponent
+    component:EditSubjectComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'add-student',
-    component:AddStudentComponent
+    component:AddStudentComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'all-student',
-    component:AllStudentComponent
+    component:AllStudentComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'edit-student',
-    component:EditStudentComponent
+    component:EditStudentComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'take-attendence',
-    component:TakeAttendenceComponent
+    component:TakeAttendenceComponent,
+    canActivate:[AuthGuard]
   },
-    {
+  {
     path:'view-attendence',
-    component:ViewAttendenceComponent
+    component:ViewAttendenceComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path:'view-all-attendence',
+    component:ViewAllAttendenceComponent,
+    canActivate:[AuthGuard]
   }
 ];
 
